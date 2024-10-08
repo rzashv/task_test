@@ -1,0 +1,13 @@
+usernames = {}
+
+parser = argparse.ArgumentParser(description='Generating usernames from input file')
+parser.add_argument('-o', '--output', required=True, help='Output file')
+parser.add_argument('input_files', nargs='+', help='Input files')
+
+try:
+    args=parser.parse_args()
+    result(args.output, args.input_files)
+
+except:
+    parser.print_help()
+
